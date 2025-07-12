@@ -8,6 +8,63 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="script.js" defer></script>
 </head>
+
+  body {
+  font-family: Arial, sans-serif;
+  background-color: #fefefe;
+  margin: 20px;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.question {
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+
+.question:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+.question:nth-child(even) {
+  background-color: #e0e0e0;
+}
+
+label {
+  display: block;
+  margin: 5px 0;
+}
+
+.submit-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #5a9;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.feedback {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
 <body>
   <div class="container">
     <h1>Trivia Quiz</h1>
