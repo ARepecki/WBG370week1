@@ -95,5 +95,24 @@ label {
 
     <button class="submit-button">Submit Answers</button>
   </div>
+  
+  $(document).ready(function () {
+  $('.submit-button').on('click', function () {
+    $('.question').each(function () {
+      const selected = $(this).find('input[type="radio"]:checked').val();
+      const correct = $(this).data('correct');
+      const feedback = $(this).find('.feedback');
+
+      if (!selected) {
+        feedback.text("Please select an answer.").css("color", "orange");
+      } else if (selected === correct) {
+        feedback.text("Correct! 🎉").css("color", "green");
+      } else {
+        feedback.text("Incorrect. Try again.").css("color", "red");
+      }
+    });
+  });
+});
+
 </body>
 </html>
